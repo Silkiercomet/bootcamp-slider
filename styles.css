@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+html {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 2rem;
+    padding: 2rem;
+    font-size: 1.2rem;
+    color: hsl(240, 38%, 20%);
+    background-image: url(images/pattern-bg.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-y:top;
+
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(320px, 50%));
+}
+.left{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    background-image: url(images/pattern-quotes.svg);
+    background-repeat: no-repeat;
+    background-position-x: 8rem  ;
+    background-position-y: 5rem;
+}
+.wrapper{
+    position: absolute;
+    padding-left: 2rem;
+}
+.testimony{
+    font-size: 2rem;
+    font-weight: 300;
+    max-width: 50%;
+}
+.info{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+}
+#name{
+    font-weight: 700;
+}
+#job{
+    font-weight: 700;
+    padding-left: 0.3rem;
+    color: hsl(240, 18%, 77%);
+}
+
+#person-img{
+    box-shadow: 0 11px 15px 19px rgba(0,0,0,0.1);
+    border-radius: 0.3rem;
+}
+.right {
+    display: flex;
+}
+.btns {
+    display: flex;
+    position: absolute;
+    top: 88%;
+    left: 55%;
+}
+.prev-btn,.next-btn{
+    background-color: white;
+    font-size: 1.25rem;
+    color:hsl(240, 18%, 77%);
+    padding: 0.7rem 0.7rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    outline: none;
+    
+}
+.prev-btn{
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    padding-right: 0;
+    margin-right: 0;
+    border: none 0 #fff;
+}
+.next-btn{
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    padding-left: 0;
+    margin-left:0 ;
+    border: none 0 #fff;
+}
+.btn-1{
+    padding: 0 0.5rem;
+    margin: 0 0.5rem;
+}
+.btn-2{
+    padding:0 0.5rem;
+    margin:0 0.5rem;
+}
+@media (max-width:721px){
+    .right{
+        grid-area: a;
+    }
+    .left{
+        grid-area: b;
+        padding-top: 4rem;
+        
+    }
+    .container{
+        grid-template-areas: 
+        'a'
+        'b';
+        grid-template-columns: 1fr;
+    }
+    .wrapper{
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .info{
+        justify-content: center;
+        align-items: center;
+    }
+    .btns{
+        justify-content: center;
+        left: 0;
+        right: 0;
+        top: 92%;
+    }
+    .testimony{
+        max-width: 100%;
+        text-align: center;
+        padding-top: 2rem;
+        padding-left: 0;
+        margin:0 3rem;
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .imagen{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+   
+}
